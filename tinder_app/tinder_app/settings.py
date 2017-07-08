@@ -78,7 +78,11 @@ WSGI_APPLICATION = 'tinder_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'django_tinder',
+        'HOST' : '146.148.46.2',
+        'USER' : 'root',
+        'PASSWORD' : '',
+        'PORT' : '3306',
     }
 }
 
