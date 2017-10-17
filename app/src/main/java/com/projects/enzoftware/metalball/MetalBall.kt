@@ -94,7 +94,7 @@ class MetalBall : AppCompatActivity() , SensorEventListener {
                 try {
                     c = surfaceHolder!!.lockCanvas(null)
                     synchronized(surfaceHolder!!){
-                        panel!!.onDraw(c)
+                        panel!!.draw(c)
                     }
                 }finally {
                     if (c!= null){
@@ -167,6 +167,14 @@ class GroundView(context: Context?) : SurfaceView(context), SurfaceHolder.Callba
     override fun surfaceCreated(holder: SurfaceHolder?) {
         thread!!.setRunning(true)
         thread!!.start()
+    }
+
+    override fun draw(canvas: Canvas?) {
+        super.draw(canvas)
+        if (canvas != null){
+            canvas.drawColor(0xFFAAAAA)
+            canvas.drawBitmap(icon,cx,cy,null)
+        }
     }
 
     override public fun onDraw(canvas: Canvas?) {
