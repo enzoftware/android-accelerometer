@@ -1,3 +1,5 @@
 # MetalBall :metal:
 ---
-<img src ="art/anim.gif"/>
+<div align="center">
+  <img src ="art/anim.gif"/>
+<div>
